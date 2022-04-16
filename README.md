@@ -8,3 +8,5 @@ a simple program for packing &amp; extracting *.it files
 功能开发中...
 
 作者是 外行+新人，且擅长写 bug， 谨慎使用
+
+编译使用了 Qt 6.2.3 MSVC2019 64bit
