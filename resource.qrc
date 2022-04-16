@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>resource/mabi.ico</file>
+        <file>resource/main.ico</file>
+    </qresource>
+</RCC>

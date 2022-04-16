@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UIAbout</class>
+ <widget class="QWidget" name="UIAbout">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>About Mabinogi package helper</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resource.qrc">
+    <normaloff>:/img/resource/mabi.ico</normaloff>:/img/resource/mabi.ico</iconset>
+  </property>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>163</x>
+     <y>267</y>
+     <width>75</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Ok</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>30</y>
+     <width>341</width>
+     <height>201</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>本工具基于 regomme 大佬的 mabi-pack2 源码 
+ 见：https://github.com/regomne/mabi-pack2 
+ 导出 mabipack.dll 动态库 
+ 制作的简易带图形界面的工具 
+ 这是一个不完善的初期版本 
+ 作者最近有些忙，没什么空写代码 
+ 作者是菜鸟，解决不了大部分问题 
+ 内存泄露是常事，能不能用看运气 
+ 仅供娱乐，由此产生的一切问题概不负责</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>
