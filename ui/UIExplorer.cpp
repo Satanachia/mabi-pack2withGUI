@@ -38,9 +38,15 @@ UIExplorer::UIExplorer(QWidget *parent)
             else{
                 files = getPath(this->ui->treeView->currentIndex());
             }
-            qDebug() << windowTitle();
-            m_ex_certain(windowTitle().toUtf8().data(), files.toUtf8().data(), filePath.toUtf8().data());
-            QDesktopServices::openUrl(QUrl::fromLocalFile(filePath));
+            if (!windowTitle().contains(".it"))
+            {
+                QMessageBox::information(nullptr, "提醒", "暂不支持跨文件的多次解包，作者已经摆烂了，欢迎贡献你的力量.", QMessageBox::Ok);
+            }
+            else
+            {
+                m_ex_certain(windowTitle().toUtf8().data(), files.toUtf8().data(), filePath.toUtf8().data());
+                QDesktopServices::openUrl(QUrl::fromLocalFile(filePath));
+            }
         }
     });
 
@@ -115,7 +121,9 @@ void UIExplorer::on_treeView_doubleClicked(const QModelIndex &index)
         if (MabiGlobal::g_fileCache.find(file) != MabiGlobal::g_fileCache.end() || MabiGlobal::g_fileCache.find(file.replace("/", "\\")) != MabiGlobal::g_fileCache.end())
         {
             auto content = m_read(MabiGlobal::g_fileCache[file]->getDocPath().toUtf8().data(), MabiGlobal::g_fileCache[file]->getFilePath().toUtf8().data());
+            ui->textBrowser->setUpdatesEnabled(false);
             ui->textBrowser->setText(QString(content));
+            ui->textBrowser->setUpdatesEnabled(true);
 #ifndef QT_DEBUG
     delete [] content;
 #endif

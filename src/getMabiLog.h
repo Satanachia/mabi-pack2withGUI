@@ -45,6 +45,7 @@ inline mabiLog::mabiLog(MabiErrorStatus& es)
         // 读log文件
         if (log.open(QIODevice::ReadOnly))
         {
+            MabiGlobal::g_setting.setValue("log_path", QString::fromStdWString(path));
             QTextStream stream(&log);
             while(m_game_dir == "" || m_patch_version == "")
             {
