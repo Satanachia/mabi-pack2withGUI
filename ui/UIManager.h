@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "MabiGlobal.h"
+#include "MabiModManager.h"
 
 namespace Ui {
 class UIManager;
@@ -18,6 +19,8 @@ public:
 
 private:
     Ui::UIManager *ui;
+    QAction* m_update;
+    QMenu* m_lableMenu;
 };
 
 #endif // UIMANAGER_H

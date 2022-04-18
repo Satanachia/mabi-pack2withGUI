@@ -5,7 +5,7 @@ MabiModManager::MabiModManager()
 
 }
 
-MabiErrorStatus MabiModManager::getMabiMods(QStringList &mods)
+MabiErrorStatus MabiModManager::getMabiMods(QMap<QString, int> &mods)
 {
     return MabiErrorStatus::eOk;
 }

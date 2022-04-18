@@ -7,7 +7,7 @@ class MabiModManager
 {
 public:
     MabiModManager();
-    MabiErrorStatus getMabiMods(QStringList& mods);
+    MabiErrorStatus getMabiMods(QMap<QString, int>& mods);
     MabiErrorStatus updateAllMods();
     MabiErrorStatus insertByIt(QString& itPath);
     MabiErrorStatus insertByTxt(QString& txtPath);
