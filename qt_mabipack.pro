@@ -13,6 +13,7 @@ SOURCES += \
     src/MabiCache.cpp \
     src/MabiFileTreeView.cpp \
     src/MabiGlobal.cpp \
+    src/MabiModManager.cpp \
     src/dll_import_mgr.cpp \
     src/main.cpp \
     src/readfromweburl.cpp \
@@ -29,6 +30,7 @@ HEADERS += \
     src/MabiCache.h \
     src/MabiFileTreeView.h \
     src/MabiGlobal.h \
+    src/MabiModManager.h \
     src/dll_import_mgr.h \
     src/getMabiLog.h \
     src/readfromweburl.h \
